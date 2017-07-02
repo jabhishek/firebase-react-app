@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../../assets/images/logo.svg';
 import './App.css';
-import {database} from './firebase'
+import {database} from '../../firebase'
 
 class App extends Component {
   constructor(props) {
