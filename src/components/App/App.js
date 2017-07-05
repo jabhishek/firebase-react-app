@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../assets/images/logo.svg';
 import './App.css';
-import {database} from '../../firebase'
+import {database} from '../../firebase';
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class App extends Component {
   handleChange = (e) => {
     this.setState({
       value: e.target.value
-    })
+    });
   }
 
   componentDidMount () {
