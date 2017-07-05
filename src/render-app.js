@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 
-import App from './App/App';
-import SignIn from './sign-in/Sign-in';
+import App from './components/App/App';
+import SignIn from './components/sign-in/Sign-in';
 import {
   Route
 } from 'react-router-dom';
