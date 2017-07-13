@@ -5,9 +5,7 @@ import { ConnectedRouter } from 'react-router-redux';
 
 import App from './components/App/App';
 import SignIn from './components/sign-in/Sign-in';
-import {
-  Route
-} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 export const renderApp = (store, history) => {
   ReactDOM.render(

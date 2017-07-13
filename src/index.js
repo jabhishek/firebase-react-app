@@ -3,6 +3,7 @@ import reducers from './reducers/index';
 import createHistory from 'history/createBrowserHistory';
 import {renderApp} from './render-app';
 import './index.css';
+import {auth} from './firebase';
 
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 
@@ -20,5 +21,13 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer,
   composeEnhancers(middleware));
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    store.dispatch({type: 'LOGIN_USER', user});
+  } else {
+    store.dispatch({type: 'LOGOUT_USER'});
+  }
+});
 
 renderApp(store, history);
