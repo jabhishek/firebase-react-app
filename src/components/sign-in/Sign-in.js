@@ -1,5 +1,6 @@
 import React from 'react';
 import {auth, googleAuthProvider} from '../../firebase';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class Signin extends React.Component {
   signin = () => {
@@ -16,8 +17,8 @@ export default class Signin extends React.Component {
   render() {
     return (
       <div>
-        <button type="submit" onClick={this.signin}>Sign In</button>
-        <button type="submit" onClick={this.signout}>Sign Out</button>
+        <RaisedButton label="Sign In" primary={true} onClick={this.signin} />
+        <RaisedButton label="Sign Out" primary={true} onClick={this.signout} style={ {marginLeft: 12} }/>
       </div>
     );
   }

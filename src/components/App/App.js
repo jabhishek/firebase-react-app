@@ -29,8 +29,10 @@ class App extends Component {
   }
 
   addPortfolio = () => {
-    const pfKey = database.ref(`users/abhi2000/portfolios/${this.state.value}`);
-    pfKey.set(true);
+/*    const pfKey = database.ref(`users/abhi2000/portfolios/${this.state.value}`);
+    pfKey.set(true);*/
+    const pfKey = database.ref(`users/abhi2000/portfolios`).push();
+    pfKey.set(this.state.value);
   }
 
   render() {
