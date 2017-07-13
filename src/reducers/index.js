@@ -1,2 +1,5 @@
+import {userReducer} from './user';
 
-export default { }
+export default {
+  user: userReducer
+};
