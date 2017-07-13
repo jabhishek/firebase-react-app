@@ -9,10 +9,15 @@ export default class Signin extends React.Component {
     });
   }
 
+  signout = () => {
+    auth.signOut();
+  }
+
   render() {
     return (
       <div>
         <button type="submit" onClick={this.signin}>Sign In</button>
+        <button type="submit" onClick={this.signout}>Sign Out</button>
       </div>
     );
   }
