@@ -7,6 +7,7 @@ import {auth} from './firebase';
 import rootSaga from './sagas/index';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
+import {login, logout} from './actions/auth';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -30,9 +31,9 @@ sagaMiddleware.run(rootSaga);
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    store.dispatch({type: 'LOGIN_USER', user});
+    store.dispatch(login(user));
   } else {
-    store.dispatch({type: 'LOGOUT_USER'});
+    store.dispatch(logout());
   }
 });
 
