@@ -2,6 +2,7 @@ import React from 'react';
 import {auth, googleAuthProvider} from '../../firebase';
 import './Sign-in.css';
 import RaisedButton from 'material-ui/RaisedButton';
+import {PageHeader} from '../common/page-header/page-header';
 
 export default class Signin extends React.Component {
   signin = () => {
@@ -21,7 +22,10 @@ export default class Signin extends React.Component {
         <div className="app">
           <div className="app--background">
             <div className="overlay"></div>
-            <h1>Portfolio Manager</h1>
+            <div className="app--content">
+              <PageHeader/>
+              <h1>Portfolio Manager</h1>
+            </div>
           </div>
         </div>
 {/*

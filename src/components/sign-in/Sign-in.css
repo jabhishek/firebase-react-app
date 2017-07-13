@@ -6,9 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  display: flex; }
 
 .app--background .overlay {
   position: fixed;
@@ -18,16 +16,26 @@
   left: 0;
   bottom: 0; }
 
-.app--background h1 {
+.app--content {
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%; }
+
+.app--content h1 {
   color: white;
   padding: 3rem;
   letter-spacing: 10px;
   font-weight: 200;
   text-transform: uppercase;
-  font-size: 5rem; }
+  font-size: 5rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center; }
   @media (min-width: 767px) {
-    .app--background h1 {
+    .app--content h1 {
       font-size: 8rem; } }
 
 /*# sourceMappingURL=Sign-in.css.map */
