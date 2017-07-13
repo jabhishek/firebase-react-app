@@ -1,10 +1,11 @@
 import React from 'react';
 import {auth, googleAuthProvider} from '../../firebase';
+import './Sign-in.css';
 import RaisedButton from 'material-ui/RaisedButton';
 
 export default class Signin extends React.Component {
   signin = () => {
-    auth.signInWithPopup(googleAuthProvider)
+    auth.signInWithRedirect(googleAuthProvider)
     .then(result => {
       console.log('signed in', result);
     });
@@ -17,8 +18,16 @@ export default class Signin extends React.Component {
   render() {
     return (
       <div>
+        <div className="app">
+          <div className="app--background">
+            <div className="overlay"></div>
+            <h1>Portfolio Manager</h1>
+          </div>
+        </div>
+{/*
         <RaisedButton label="Sign In" primary={true} onClick={this.signin} />
         <RaisedButton label="Sign Out" primary={true} onClick={this.signout} style={ {marginLeft: 12} }/>
+*/}
       </div>
     );
   }
