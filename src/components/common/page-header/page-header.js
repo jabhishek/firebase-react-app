@@ -3,6 +3,7 @@ import {auth, googleAuthProvider} from '../../../firebase';
 import './page-header.css';
 import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
+import {ProfileImage} from '../profile-image/profile-image';
 
 const signIn = () => {
   auth.signInWithRedirect(googleAuthProvider)
@@ -17,7 +18,7 @@ const signOut = () => {
 
 const RightComponent = ({user}) => {
   if (user) {
-    return <RaisedButton label="Sign Out" primary={true} onClick={signOut} />;;
+    return <ProfileImage user={user}/>;
   } else {
     return <RaisedButton label="Sign In" primary={true} onClick={signIn} />;
   }
