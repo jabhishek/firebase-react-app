@@ -6,7 +6,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import App from './components/App/App';
-import SignIn from './components/sign-in/Sign-in';
+import LandingPage from './components/landing-page/landing-page';
 import { Route } from 'react-router-dom';
 
 injectTapEventPlugin();
@@ -17,8 +17,8 @@ export const renderApp = (store, history) => {
       <ConnectedRouter history={history}>
         <MuiThemeProvider>
         <div>
-          <Route exact path="/" component={App}/>
-          <Route path="/signin" component={SignIn}/>
+          <Route exact path="/" component={LandingPage}/>
+          <Route path="/landing" component={LandingPage}/>
           <Route path="/app" component={App}/>
         </div>
         </MuiThemeProvider>
