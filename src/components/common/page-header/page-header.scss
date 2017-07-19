@@ -3,4 +3,12 @@
 .page-header {
   height: $pageHeaderHeight;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.page-header__right {
+  padding-right: 10px;
 }
