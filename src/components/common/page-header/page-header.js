@@ -3,7 +3,7 @@ import {auth, googleAuthProvider} from '../../../firebase';
 import './page-header.css';
 import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
-import {ProfileImage} from '../profile-image/profile-image';
+import {ProfileInfo} from '../profile-info/profile-info';
 
 const signIn = () => {
   auth.signInWithRedirect(googleAuthProvider)
@@ -12,13 +12,11 @@ const signIn = () => {
     });
 };
 
-const signOut = () => {
-  auth.signOut();
-};
-
 const RightComponent = ({user}) => {
   if (user) {
-    return <ProfileImage user={user}/>;
+    return (
+      <ProfileInfo user={user}/>
+    );
   } else {
     return <RaisedButton label="Sign In" primary={true} onClick={signIn} />;
   }
