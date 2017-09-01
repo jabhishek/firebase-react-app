@@ -6,6 +6,7 @@
     "firebase": "4.1.1",
     "keymirror": "0.1.1",
     "material-ui": "0.18.6",
+    "node-sass-chokidar": "^0.0.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "5.0.5",
@@ -30,6 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "eslint:watch": "esw -w --color"
+    "eslint:watch": "esw -w --color",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   }
 }
