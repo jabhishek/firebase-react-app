@@ -19,11 +19,15 @@
   "devDependencies": {
     "eslint-config-react": "^1.1.7",
     "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-react": "^6.2.0",
     "eslint-plugin-standard": "^2.0.1",
     "eslint-watch": "^2.1.14",
     "firebase-tools": "3.9.1",
+    "flow-bin": "^0.54.0",
+    "flow-typed": "^2.1.5",
+    "onchange": "^3.2.1",
     "react-scripts": "1.0.7"
   },
   "scripts": {
@@ -31,8 +35,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "eslint:watch": "esw -w --color",
+    "eslint:watch": "esw -w --fix --color",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "flow-watch": "onchange './**/*.*' -i -- yarnpkg run flow"
   }
 }

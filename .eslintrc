@@ -1,9 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": ["standard", "plugin:react/recommended"],
+  "extends": ["standard", "plugin:react/recommended", "plugin:flowtype/recommended"],
   "plugins": [
     "standard",
-    "promise"
+    "promise",
+    "flowtype"
   ],
   "globals": {
     "sinon": true,
@@ -25,6 +26,13 @@
     "prefer-const": [1],
     "handle-callback-err": [0],
     "camelcase": [0],
-    "space-before-function-paren": [0]
+    "space-before-function-paren": [0],
+    "flowtype/require-valid-file-annotation": [2,"always"],
+    "indent": ["error", 2]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
   }
 }

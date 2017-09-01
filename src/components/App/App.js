@@ -1,10 +1,20 @@
+// @flow
 import React, { Component } from 'react';
 import logo from '../../assets/images/logo.svg';
 import './App.css';
 import {database} from '../../firebase';
 
-class App extends Component {
-  constructor(props) {
+type Props = {
+
+}
+
+type State = {
+  data: ?Object,
+    value: ?string
+}
+
+class App extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       data: null,
@@ -12,7 +22,7 @@ class App extends Component {
     };
   }
 
-  handleChange = (e) => {
+  handleChange = (e: SyntheticInputEvent<*>) => {
     this.setState({
       value: e.target.value
     });
@@ -30,7 +40,7 @@ class App extends Component {
 
   addPortfolio = () => {
 /*    const pfKey = database.ref(`users/abhi2000/portfolios/${this.state.value}`);
-    pfKey.set(true);*/
+    pfKey.set(true); */
     const pfKey = database.ref(`users/abhi2000/portfolios`).push();
     pfKey.set(this.state.value);
   }

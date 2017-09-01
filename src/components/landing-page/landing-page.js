@@ -1,8 +1,12 @@
+// @flow
 import React from 'react';
 import './landing-page.css';
 import PageHeader from '../common/page-header/page-header';
 
-export default class Signin extends React.Component {
+type Props = {
+};
+
+export default class Signin extends React.Component<Props> {
   render() {
     return (
       <div>

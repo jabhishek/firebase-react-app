@@ -1,4 +1,4 @@
-
-export default function* rootSaga () {
+// @flow
+export default function* rootSaga (): Generator<*, *, *> {
   yield {};
 }

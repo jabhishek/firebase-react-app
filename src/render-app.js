@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -11,6 +12,7 @@ import { Route } from 'react-router-dom';
 
 injectTapEventPlugin();
 
+// $FlowIgnore
 export const renderApp = (store, history) => {
   ReactDOM.render(
     <Provider store={store}>

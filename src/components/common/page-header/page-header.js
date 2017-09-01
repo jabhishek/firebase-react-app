@@ -1,15 +1,17 @@
+// @flow
 import React from 'react';
 import {auth, googleAuthProvider} from '../../../firebase';
 import './page-header.css';
 import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
 import {ProfileInfo} from '../profile-info/profile-info';
+import type {User} from '../../../actions/auth';
 
 const logIn = () => {
   auth.signInWithRedirect(googleAuthProvider);
 };
 
-const RightComponent = ({user}) => {
+const RightComponent = ({user}: {user: User}) => {
   if (user) {
     return (
       <ProfileInfo user={user}/>
@@ -19,7 +21,7 @@ const RightComponent = ({user}) => {
   }
 };
 
-export const PageHeader = ({user}) => {
+export const PageHeader = ({user}: {user: User}) => {
   return (
     <div className="page-header">
       <div className="page-header__left"></div>

@@ -1,3 +1,4 @@
+// @flow
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
 import reducers from './reducers/index';
 import createHistory from 'history/createBrowserHistory';
@@ -34,7 +35,7 @@ sagaMiddleware.run(rootSaga);
 auth.getRedirectResult().then((res) => {
   console.log('result', res);
   if (res.user) {
-      store.dispatch(push('/app'));
+    store.dispatch(push('/app'));
   }
 });
 

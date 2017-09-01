@@ -1,3 +1,4 @@
+// @flow
 import {userReducer} from './user';
 
 export default {
