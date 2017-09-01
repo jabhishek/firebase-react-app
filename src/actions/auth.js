@@ -1,8 +1,8 @@
 import {AUTH} from '../constants/action-types';
 
-export const login = user => {
+export const loginSuccess = user => {
   return {
-    type: AUTH.LOGIN_USER,
+    type: AUTH.LOGIN_USER_SUCCESS,
     user
   }
 };

@@ -1,7 +1,7 @@
 
 export const userReducer = (state = null, action) => {
   switch (action.type) {
-    case 'LOGIN_USER': {
+    case 'LOGIN_USER_SUCCESS': {
       return action.user;
     }
     case 'LOGOUT_USER': {

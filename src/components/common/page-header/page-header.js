@@ -5,11 +5,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
 import {ProfileInfo} from '../profile-info/profile-info';
 
-const signIn = () => {
-  auth.signInWithRedirect(googleAuthProvider)
-    .then(result => {
-      console.log('signed in', result);
-    });
+const logIn = () => {
+  auth.signInWithRedirect(googleAuthProvider);
 };
 
 const RightComponent = ({user}) => {
@@ -18,7 +15,7 @@ const RightComponent = ({user}) => {
       <ProfileInfo user={user}/>
     );
   } else {
-    return <RaisedButton label="Sign In" primary={true} onClick={signIn} />;
+    return <RaisedButton label="Sign In" primary={true} onClick={logIn} />;
   }
 };
 
