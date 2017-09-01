@@ -35,7 +35,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "eslint:watch": "esw -w --fix --color",
+    "eslint:watch": "esw -w --color --cache --fix",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "flow-watch": "onchange './**/*.*' -i -- yarnpkg run flow"

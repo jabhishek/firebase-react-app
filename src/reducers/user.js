@@ -1,19 +1,24 @@
 // @flow
 import type {User} from '../actions/auth';
+import {AUTH} from '../constants/action-types';
 type State = {
-
+    user?: User
 }
 
-type Action = {
-  type: string,
-    user: User
+type Action<T> = {
+    type: T,
+    payload?: Object
 }
-export const userReducer = (state: State = {}, action: Action): State => {
+
+type LoginSuccessAction = Action<AUTH.LOGIN_USER_SUCCESS>;
+type LogoutAction = Action<AUTH.LOGOUT_USER>;
+
+export const userReducer = (state: State = {}, action: LoginSuccessAction | LogoutAction): State => {
   switch (action.type) {
-  case 'LOGIN_USER_SUCCESS': {
-    return action.user;
+  case AUTH.LOGIN_USER_SUCCESS: {
+    return { user: action.payload };
   }
-  case 'LOGOUT_USER': {
+  case AUTH.LOGOUT_USER: {
     return {};
   }
   default: {
