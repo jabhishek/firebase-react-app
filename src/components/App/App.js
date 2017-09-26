@@ -4,17 +4,13 @@ import logo from '../../assets/images/logo.svg';
 import './App.css';
 import {database} from '../../firebase';
 
-type Props = {
-
-}
-
 type State = {
   data: ?Object,
     value: ?string
 }
 
-class App extends Component<Props, State> {
-  constructor(props: Props) {
+class App extends Component<{}, State> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       data: null,
@@ -22,7 +18,8 @@ class App extends Component<Props, State> {
     };
   }
 
-  handleChange = (e: SyntheticInputEvent<*>) => {
+  handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
+    (e.currentTarget: HTMLInputElement);
     this.setState({
       value: e.target.value
     });

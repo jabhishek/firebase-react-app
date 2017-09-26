@@ -3,10 +3,7 @@ import React from 'react';
 import './landing-page.css';
 import PageHeader from '../common/page-header/page-header';
 
-type Props = {
-};
-
-export default class Signin extends React.Component<Props> {
+export default class Signin extends React.Component<{}> {
   render() {
     return (
       <div>
