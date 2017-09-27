@@ -9,6 +9,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './components/App/App';
 import LandingPage from './components/landing-page/landing-page';
 import { Route } from 'react-router-dom';
+import {AuthenticatedComponent} from './components/authenticated-component';
 
 injectTapEventPlugin();
 
@@ -21,7 +22,7 @@ export const renderApp = (store, history) => {
         <div>
           <Route exact path="/" component={LandingPage}/>
           <Route path="/landing" component={LandingPage}/>
-          <Route path="/app" component={App}/>
+          <Route path="/app" component={AuthenticatedComponent(App)}/>
         </div>
         </MuiThemeProvider>
       </ConnectedRouter>
