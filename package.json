@@ -27,6 +27,7 @@
     "firebase-tools": "3.9.1",
     "flow-bin": "^0.54.0",
     "flow-typed": "^2.1.5",
+    "jest": "^21.2.0",
     "onchange": "^3.2.1",
     "react-scripts": "1.0.7"
   },
@@ -38,6 +39,7 @@
     "eslint:watch": "esw -w --color --cache --fix",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "flow-watch": "onchange './**/*.*' -i -- yarnpkg run flow"
+    "flow-watch": "onchange './**/*.*' -i -- yarnpkg run flow",
+    "flowtyped": "flow-typed install"
   }
 }

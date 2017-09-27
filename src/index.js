@@ -31,6 +31,7 @@ const store = createStore(
   composeEnhancers(middleware));
 
 sagaMiddleware.run(rootSaga);
+/*
 
 auth.getRedirectResult().then((res) => {
   console.log('result', res);
@@ -39,7 +40,8 @@ auth.getRedirectResult().then((res) => {
   }
 });
 
-auth.onAuthStateChanged(user => {
+*/
+auth.onAuthStateChanged((user) => {
   console.log('user');
   if (user) {
     store.dispatch(loginSuccess(user));

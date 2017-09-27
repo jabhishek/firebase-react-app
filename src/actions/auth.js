@@ -2,7 +2,7 @@
 import {AUTH} from '../constants/action-types';
 
 export type User = {
-  photoURL: string
+  photoURL: ?string
 };
 
 export const loginSuccess = (user: User) => {
