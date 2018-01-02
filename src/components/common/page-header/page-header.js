@@ -8,7 +8,11 @@ import {ProfileInfo} from '../profile-info/profile-info';
 import type {User} from '../../../actions/auth';
 
 const logIn = () => {
-  auth.signInWithRedirect(googleAuthProvider);
+  auth.signInWithPopup(googleAuthProvider).then(user => {
+    console.log('user', user);
+  }).catch(err => {
+    console.log('err', err);
+  });
 };
 
 const RightComponent = ({user}: {user: User}) => {
