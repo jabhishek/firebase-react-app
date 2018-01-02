@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
@@ -22,7 +23,7 @@ export const AuthenticatedComponent = (Component) => {
 
     render() {
       console.log('props', this.props);
-      return <Component {...this.props}/>
+      return <Component {...this.props}/>;
     }
   }
 
